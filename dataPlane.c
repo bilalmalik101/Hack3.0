@@ -10,9 +10,12 @@ int main(){
     scanf("%i",&days);
     printf("How much Gb of your data you used:");
     scanf("%f",&useddata);
-    remainingDays=30-days;
+    remainingdays=30-days;
     remainingdata=monthlydata-useddata;
     dailydataused=useddata/days;
-    
+   if(remainingdata!=0){
+    remainingdata=remainingdata/remainingdays;
+     float exceedDailyUsed=dailydataused-averagedatauseddaily;
+     dataexceeding=30*dailydataused;
 
 }
