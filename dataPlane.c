@@ -24,6 +24,7 @@ int main(){
      printf("Average daily use: %f GB/day\n",dailydataused);
      printf("You are EXCEEDING your average daily use ( %f GB/day)\n",exceedDailyUsed);
      printf("Continuing this high usage, you'll exceed your data plan by %f GB\n",dataexceeding
+     //if user use no data than give information how to use
      } else if(useddata==0){
      averagedatauseddaily=monthlydata/30;
      printf("_____________________________________________\n");
@@ -31,5 +32,13 @@ int main(){
      printf("Average daily use: %f GB/day\n",dailydataused);
      printf("You are at or below your average daily use (%f GB/day)\n",averagedatauseddaily);
      printf("You can use up to %f GB/day and stay below your data plan limit\n",remainingdatauseddaily);
-     }
+     } else if(remainingdata==0){
+     printf("_______________________________________________\n");   
+     printf("%i days used, %i days remaining\n",days,remainingDays);
+     printf("Average daily use: %f GB/day\n",dailydataused);
+     printf("You have already met your limit for this month.  Looks like you're getting some overage charges\n");
+    }
+
+    return 0;
+}
 }
